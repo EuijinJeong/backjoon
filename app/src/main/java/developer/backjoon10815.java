@@ -22,11 +22,14 @@ public class backjoon10815 {
         }
 
         int m = Integer.parseInt(br.readLine()); // 판단해야할 카드의 수
-        StringBuilder result = new StringBuilder(); 
+        StringBuilder result = new StringBuilder(); // 판단해야할 카드의 리스트
+
+        // 위에서 한번 사용했으니 다시 초기화해야함.
         st = new StringTokenizer(br.readLine());
 
+        // 입력받으면서 동시에 result에 값 추가
         for(int i = 0; i < m; i++) {
-            int queryCard = Integer.parseInt(st.nextToken().trim());
+            int queryCard = Integer.parseInt(st.nextToken());
             if(sangeunCards.contains(queryCard)) {
                 result.append("1 ");
             } else {
