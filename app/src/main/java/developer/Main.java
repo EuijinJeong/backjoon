@@ -11,33 +11,33 @@ public class Main {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int n = Integer.parseInt(br.readLine()); // 점의 개수
+        int n = Integer.parseInt(br.readLine()); // 회원 수
 
-        int[][] arr = new int[n][2]; // 위치가 같은 두 점은 없음
+        String[][] arr = new String[n][2];
 
-        // 좌표값 입력 받음
-        for(int i = 0; i< n; i++) {
-            String[] input = br.readLine().split(" ");
-            arr[i][0] = Integer.parseInt(input[0]);
-            arr[i][1] = Integer.parseInt(input[1]);
+        for(int i = 0; i<n; i++) {
+            arr[i] = br.readLine().split(" ");
         }
 
-        Arrays.sort(arr, new Comparator<int[]>() {
+
+        // 나이글 기준으로 정렬
+        // 만약 나이가 같다면, 가입한 순으로 정렬
+        Arrays.sort(arr, new Comparator<String[]>() {
             @Override
-            public int compare(int[] o1, int[] o2) {
-                // x좌표를 기준으로 정렬, x좌표가 같다면 y좌표를 기준으로 정렬
-                if (o1[0] == o2[0]) {
-                    return Integer.compare(o1[1], o2[1]);
+            public int compare(String[] o1, String[] o2) {
+                int age1 = Integer.parseInt(o1[0]);
+                int age2 = Integer.parseInt(o2[0]);
+                if(age1 != age2) {
+                    return Integer.compare(age1, age2);
                 } else {
-                    return Integer.compare(o1[0], o2[0]);
+                    return 0;
                 }
             }
         });
 
-        for(int i =0; i<n; i++){
+         // 정렬된 결과 출력
+         for (int i = 0; i < n; i++) {
             System.out.println(arr[i][0] + " " + arr[i][1]);
         }
-
-        
     }
 }

@@ -33,5 +33,12 @@ public class backjoon18870 {
                 coordinateMap.put(value, rank++);
             }
         }
+
+
+        StringBuilder sb = new StringBuilder();
+        for(int value : arr) {
+            sb.append(coordinateMap.get(value)).append(" ");
+        }
+        System.out.print(sb.toString().trim());
     }
 }

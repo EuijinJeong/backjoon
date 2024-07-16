@@ -12,7 +12,7 @@ public class backjoon10814 {
         
         int n = Integer.parseInt(br.readLine()); // 회원 수
 
-        String[][] arr = new String[n][2];
+       int[] arr = new Int[n][2];
 
         for(int i = 0; i<n; i++) {
             arr[i] = br.readLine().split(" ");
