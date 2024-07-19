@@ -3,8 +3,26 @@
  */
 package developer;
 
+import java.util.Scanner;
+
 public class App {
-    public static void main(String[] args) {
-    
-    }
+    // public static void main(String[] args) {
+    //     Scanner sc = new Scanner(System.in);
+    //     ManageCraneGameMachine mGameMachine = new ManageCraneGameMachine();
+
+    //     System.out.println("인형뽑기 게임을 시작합니다.");
+    //     System.out.println("코인을 넣어주세요: ");
+
+    //     int coin = sc.nextInt();
+
+    //     if(coin > 0 ) {
+    //         if(mGameMachine.doGame(coin) == 1) {
+    //             System.out.println("인형뽑기에 성공하셨습니다!");
+    //         } else if(mGameMachine.doGame(coin) == 0) {
+    //             System.out.println("인형뽑기에 실패하셨습니다...");
+    //         }
+    //     } else {
+    //         System.out.println("코인을 넣어주세요.");
+    //     }
+    // }
 }
